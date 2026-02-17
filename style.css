@@ -1,0 +1,243 @@
+:root {
+	color-scheme: light dark;
+	/* Light Theme */
+	--light-bg: white;
+	--light-font: black;
+	--light-accent: rgb(117 157 169);
+	--light-shadow: rgb(117 131 169);
+	--light-border: rgb(117 169 155);
+	
+
+/* Dark Theme */
+	--dark-bg: black;
+	--dark-font: white;
+   --dark-accent: rgb(117 157 169);
+	--dark-shadow: rgb(117 131 169);
+	--dark-border: rgb(117 169 155);
+	
+
+}
+	
+body {
+margin: 0 auto;
+text-align: center;
+background: light-dark(var(--light-bg), var(--dark-bg));
+}
+h1 {
+	font-size: 8em;
+}
+.skip-link {
+	position:absolute;
+left:-10000px;
+top:auto;
+width:1px;
+height:1px;
+overflow:hidden;
+	color: light-dark(var(--light-font), var(--dark-font));
+}
+.skip-link:focus {
+	font-weight: bold;
+	font-size: large;
+	top:20px;
+	left: 20px;
+   width:auto;
+   height:auto;
+	padding: 20px;
+	border: 5px solid light-dark(var(--light-accent), var(--dark-accent));
+
+}
+
+/* Nav Styles */
+nav {
+  
+}
+nav ul { 
+  list-style-type: none;
+  padding: 5px;
+  display: flex;
+  -webkit-display: flex;
+  justify-content: center;
+}
+
+.nav-link {
+  display: block;
+  color: light-dark(var(--light-font), var(--dark-font));
+  padding: 14px 16px;
+  text-decoration: none;
+  text-align: center;
+  font-size: x-large;
+}
+.nav-link:hover, .nav-link:focus {
+background: light-dark(var(--light-accent), var(--dark-accent));
+color: light-dark(var(--light-bg), var(--dark-bg));
+}
+
+/* Dropdowns */
+
+.has-dropdown {
+  position: relative;
+}
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 200px;
+  background: light-dark(var(--light-bg), var(--dark-bg));
+  border: 2px solid light-dark(var(--light-border), var(--dark-border));
+  box-shadow: 0 2px 5px light-dark(var(--light-shadow), var(--dark-shadow));
+  list-style: none;
+  padding: 0;
+ }
+.link {
+	display: block;
+ text-decoration: none;
+  color: light-dark(var(--light-font), var(--dark-font));
+}
+.link:hover, .link:focus, .skip-link:focus, .footer-link:hover, .footer-link:focus {
+  background: light-dark(var(--light-accent), var(--dark-accent));
+}
+
+.has-dropdown:hover .dropdown,
+.has-dropdown:focus-within .dropdown {
+  display: block;
+}
+/* General Styling Elements */
+.button {
+	display: inline-block;
+	font-size: 1.2em;
+	margin: 20px 15px;
+padding: 15px;
+  background: light-dark(var(--light-bg), var(--dark-bg));
+  border: 2px solid light-dark(var(--light-border), var(--dark-border));
+border-radius: 45px;
+box-shadow: 4px 4.5px light-dark(var(--light-shadow), var(--dark-shadow));
+text-decoration: none;
+  color: light-dark(var(--light-font), var(--dark-font));
+cursor: pointer;
+
+}
+.button:hover, .button:focus {
+  background: light-dark(var(--light-accent), var(--dark-accent));
+}
+
+/* Web Dev Projects */
+.web-dev-figure-container {
+  padding: 50px;
+  display: flex;
+  -webkit-display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+figure {
+  background: light-dark(var(--light-accent), var(--dark-accent));
+ padding: 20px;
+ border-radius: 30px;
+ box-shadow: -4px 3px light-dark(var(--light-shadow), var(--dark-shadow));
+ 
+}
+figure img {
+	height: 100px;
+	width: auto;
+  border: 2px solid light-dark(var(--light-border), var(--dark-border));
+	border-radius: 30px;
+		
+}
+figcaption {
+	font-weight: bold;
+}
+.fig-link, span {
+	color: light-dark(var(--light-bg), var(--dark-bg));
+}
+.fig-link {
+	display: inline-block;
+	margin-top: 5px;
+	padding: 5px;
+	border-radius: 15px;
+}
+.fig-link:hover, .fig-link:focus {
+	text-decoration: none;
+	background-color: light-dark(var(--light-shadow), var(--dark-shadow));
+}
+.fig-link:visited, .fig-link:active {
+	color: silver;
+
+	}
+
+		
+}
+.it-detail-container {
+	display: flex;
+	  -webkit-display: flex;
+	flex-direction: column;
+	margin: 45px;
+	padding: 25px;
+  border: 1px solid light-dark(var(--light-border), var(--dark-border));
+	border-radius: 20px;
+  background: light-dark(var(--light-bg), var(--dark-bg));
+	text-align: left;
+	box-shadow: 3px 3px light-dark(var(--light-shadow), var(--dark-shadow));
+	color: white;
+}
+summary {
+font-size: 2em;
+}
+details {
+	text-align: left;
+  border: 1px solid light-dark(var(--light-border), var(--dark-border));
+  background: light-dark(var(--light-accent), var(--dark-accent));
+margin-bottom: 10px;
+padding: 10px 15px;
+border-radius: 40px;
+box-shadow: 2px 3px light-dark(var(--light-shadow), var(--dark-shadow));
+}
+
+/* RESUME ITEMS */
+.it-helpdesk-resume, .master-resume {
+margin: 90px;
+padding: 25px;
+  border: 5px double light-dark(var(--light-border), var(--dark-border));
+text-align: center;
+}
+.resume-title {
+	
+}
+.resume-section-header {
+
+}
+.resume-job-header, .resume-list {
+text-align: left;
+}
+.resume-list.short {
+display: flex;
+  -webkit-display: flex;
+flex-direction: column;
+
+}
+footer {
+	border-top: 1px solid light-dark(var(--light-accent), var(--dark-accent));
+}
+button {
+   font-family: inherit;
+}
+.email {
+	display: none;
+}
+
+
+
+#myBtn {
+	position: fixed;
+	right: 20px;
+	bottom: 20px;
+	cursor: pointer;
+	padding: 15px;
+	border: 1px solid light-dark(var(--light-border), var(--dark-border));
+	box-shadow: 2px 3px light-dark(var(--light-shadow), var(--dark-shadow));
+	border-radius: 35px;
+	
+}
+
+#myBtn:hover, #myBtn:focus {
+background: light-dark(var(--light-accent), var(--dark-accent));
+}
